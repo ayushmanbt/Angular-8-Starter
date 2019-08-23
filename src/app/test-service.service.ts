@@ -9,4 +9,10 @@ export class TestServiceService {
   getResponse() {
     return this.http.get("http://localhost:5000/");
   }
+
+  getGraph() {
+    return this.http.get("http://localhost:5000/graph", {
+      responseType: "blob"
+    });
+  }
 }
